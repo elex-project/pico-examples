@@ -1,0 +1,42 @@
+#!/usr/bin/bash
+
+function fn_clean {
+    if [ -d ./build ]
+    then
+        rm -r ./build    
+    fi
+    mkdir build
+}
+
+function fn_cmake {
+    cd build
+    cmake ..
+    cd ..
+}
+
+function fn_make {
+    cd build
+    make
+    cd ..
+}
+
+if [ -z $1 ]
+then
+    fn_clean
+    fn_cmake
+    fn_make
+elif [ $1 == 'clean' ]
+then
+    echo 'Cleaning build dir.'
+    fn_clean
+elif [ $1 == 'cmake' ]
+then
+    echo 'Exec cmake'
+    fn_cmake
+elif [ $1 == 'make' ]
+then
+    echo 'Exec make'
+    fn_make
+else
+    echo 'What do you want???'
+fi
