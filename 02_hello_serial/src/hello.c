@@ -7,8 +7,8 @@ const uint LED_PIN = 25;
 
 int main()
 {
-    //bi_decl(bi_program_description("This is a test binary."));
-    //(bi_1pin_with_name(LED_PIN, "On-board LED"));
+    bi_decl(bi_program_description("Hello Serial via USB."));
+    bi_decl(bi_1pin_with_name(LED_PIN, "On-board LED"));
 
     stdio_init_all();
 
@@ -17,10 +17,10 @@ int main()
 
     while (true)
     {
-        gpio_put(LED_PIN, 0);
+        gpio_put(LED_PIN, false);
         sleep_ms(250);
-        gpio_put(LED_PIN, 1);
-        puts("Hello World~~!\n");
+        gpio_put(LED_PIN, true);
+        puts("Hello World~~!");
         sleep_ms(1000);
     }
 }

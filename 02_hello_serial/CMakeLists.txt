@@ -11,8 +11,11 @@ add_executable(hello
     src/hello.c
 )
 
-pico_enable_stdio_usb(hello 1)
-pico_enable_stdio_uart(hello 1)
+pico_set_program_name(ProjectName "Hello Serial")
+pico_set_program_version(ProjectName "0.1.0")
+
+pico_enable_stdio_usb(hello 1) # 표준 출력을 USB로
+pico_enable_stdio_uart(hello 0) # 표준 출력을 UART로, 안함.
 
 pico_add_extra_outputs(hello)
 

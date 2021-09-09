@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-
+export PICO_SDK_PATH="/media/elex/UltraFit/pico-sdk"
+ 
 function fn_clean {
     if [ -d ./build ]
     then
