@@ -10,8 +10,8 @@ pico_sdk_init()
 add_executable(blink
     src/blink.c
 )
-pico_set_program_name(ProjectName "Blink")
-pico_set_program_version(ProjectName "0.1.0")
+pico_set_program_name(blink "Blink")
+pico_set_program_version(blink "0.1.0")
 
 pico_enable_stdio_usb(blink 1)
 pico_enable_stdio_uart(blink 0)

@@ -3,7 +3,8 @@
         {
             "name": "Linux GCC ARM",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../../../pico-sdk/src/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

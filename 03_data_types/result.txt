@@ -1,0 +1,7 @@
+char 23 : size=1
+short 23 : size=2
+int 23 : size=4
+long 23 : size=4
+long long 23 : size=8
+float 3.140000 : size=4
+double 3.140000 : size=8
